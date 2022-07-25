@@ -3,7 +3,7 @@ import Web3 from "web3";
 import cogoToast from "cogo-toast";
 import WalletConnectProvider from "@walletconnect/web3-provider";
 import { abis } from "../../../smartcontract/index";
-import { NETWORK_ID, RPC_URL, INFURA_ID, DIVE_WALLET_CONTRACT } from "../../../config";
+import { NETWORK_ID, RPC_URL, DIVE_WALLET_CONTRACT } from "../../../config";
 
 const dive_wallet_abi = abis.diveWallet;
 export const WalletContext = React.createContext();
@@ -126,7 +126,6 @@ class WalletContextProvider extends Component {
   connectToWalletConnect =  async () => {
     try {
       const provider = new WalletConnectProvider({
-        infuraId: INFURA_ID,
         rpc: {
           56: "https://bsc-dataseed.binance.org",
         },
