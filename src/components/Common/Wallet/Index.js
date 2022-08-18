@@ -87,9 +87,7 @@ class WalletContextProvider extends Component {
         } else {
           this.setState({ connectModal: false });
           return cogoToast.error(
-            `Please change your network to ${
-              networkId !== 97 ? "Binance testnet!" : "Binance mainnet!"
-            }`
+            `Please change your network to Binance mainnet!`
           );
         }
       } catch (e) {
