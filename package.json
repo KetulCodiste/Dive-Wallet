@@ -32,6 +32,12 @@
     "web-vitals": "^2.1.4",
     "web3": "^1.7.1"
   },
+  "overrides": {
+    "react-error-overlay": "6.0.9"
+  },
+  "resolutions": {
+    "react-error-overlay": "6.0.9"
+  },
   "scripts": {
     "start": "env-cmd -f .env.local react-scripts start",
     "build": "env-cmd -f .env.local react-scripts build",
@@ -57,7 +63,10 @@
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
-      "last 1 safari version"
+      "last 1 safari version",
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
     ]
   }
 }

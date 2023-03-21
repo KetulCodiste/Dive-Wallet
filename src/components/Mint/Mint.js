@@ -86,8 +86,11 @@ function Mint() {
     const getClaimedData = async () => {
       await getData();
     }
+    // getClaimedData();
+    if(accountId && diveWalletContract) {
     getClaimedData();
-  }, [accountId]);
+    }
+  }, [accountId, diveWalletContract]);
 
   const getData = async () => {
     try {
